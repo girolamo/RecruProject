@@ -1,0 +1,29 @@
+﻿using Microsoft.Extensions.DependencyInjection;
+using RecruProject.Console.Configuration;
+using RecruProject.Core.Logger;
+using RecruProject.Core.Models;
+using RecruProject.Core.Services;
+
+// Register
+var services = new ServiceCollection();
+services.Register();
+
+// Build
+var servicesProvider = services.BuildServiceProvider();
+var logger = servicesProvider.GetRequiredService<ILogger>();
+var orderService1 = servicesProvider.GetRequiredService<IOrderService>();
+
+// Resolve
+// Adding task using 'await' keyword - first approach
+await orderService1.AddOrderAsync(new Order { Id = 1, Description = "Laptop" });
+await orderService1.AddOrderAsync(new Order { Id = 2, Description = "Phone" });
+
+// Processing task using Task.WaitAll - second approach
+var tasks = new Task[3];
+tasks[0] = orderService1.ProcessOrderAsync(1);
+tasks[1] = orderService1.ProcessOrderAsync(2);
+tasks[2] = orderService1.ProcessOrderAsync(-1);
+Task.WaitAll(tasks);
+
+logger.LogInfo("All orders processed.");
+

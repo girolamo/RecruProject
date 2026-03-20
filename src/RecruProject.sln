@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecruProject.Console", "RecruProject.Console\RecruProject.Console.csproj", "{8A329C1B-A9DF-44E4-8FDF-1EE6C598A2A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecruProject.Core", "RecruProject.Core\RecruProject.Core.csproj", "{E526C3E5-FD4E-4000-919A-A704C316B5BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecruProject.Infrastructure", "RecruProject.Infrastructure\RecruProject.Infrastructure.csproj", "{86E94739-CA44-45C3-AE75-2655DFECCE33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecruProject.Infrastructure.Tests", "RecruProject.Infrastructure.Tests\RecruProject.Infrastructure.Tests.csproj", "{3CE600DD-C5FF-402D-A5C3-AF52D43345CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8A329C1B-A9DF-44E4-8FDF-1EE6C598A2A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A329C1B-A9DF-44E4-8FDF-1EE6C598A2A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A329C1B-A9DF-44E4-8FDF-1EE6C598A2A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A329C1B-A9DF-44E4-8FDF-1EE6C598A2A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E526C3E5-FD4E-4000-919A-A704C316B5BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E526C3E5-FD4E-4000-919A-A704C316B5BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E526C3E5-FD4E-4000-919A-A704C316B5BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E526C3E5-FD4E-4000-919A-A704C316B5BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86E94739-CA44-45C3-AE75-2655DFECCE33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86E94739-CA44-45C3-AE75-2655DFECCE33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86E94739-CA44-45C3-AE75-2655DFECCE33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86E94739-CA44-45C3-AE75-2655DFECCE33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CE600DD-C5FF-402D-A5C3-AF52D43345CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CE600DD-C5FF-402D-A5C3-AF52D43345CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CE600DD-C5FF-402D-A5C3-AF52D43345CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CE600DD-C5FF-402D-A5C3-AF52D43345CE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
