@@ -17,6 +17,7 @@ var orderService1 = servicesProvider.GetRequiredService<IOrderService>();
 // Adding task using 'await' keyword - first approach
 await orderService1.AddOrderAsync(new Order { Id = 1, Description = "Laptop" });
 await orderService1.AddOrderAsync(new Order { Id = 2, Description = "Phone" });
+await orderService1.AddOrderAsync(new Order { Id = 2, Description = "Computer" }); // Force error
 
 // Processing task using Task.WaitAll - second approach
 var tasks = new Task[3];
