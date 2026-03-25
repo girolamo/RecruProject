@@ -4,6 +4,6 @@ namespace RecruProject.Core.Services;
 
 public interface IOrderService
 { 
-    Task ProcessOrderAsync(int orderId);
-    Task AddOrderAsync(Order order);
+    Task<Order?> ProcessOrderAsync(int orderId);
+    Task<int?> AddOrderAsync(Order order);
 }

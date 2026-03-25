@@ -20,13 +20,14 @@ public class OrderRepositoryTests
     public async Task GetOrderAsync_ShouldReturnOrderName_WhenOrderExists()
     {
         // Arrange
-        await _orderRepository.AddOrderAsync(new Order() { Id = 1, Description = "Laptop"});
+        await _orderRepository.AddOrderAsync(new Order { Id = 1, Description = "Laptop"});
         
         // Act
         var result = await _orderRepository.GetOrderAsync(1);
 
         // Assert
-        result.Should().Be("Laptop");
+        result.Id.Should().Be(1);
+        result.Description.Should().Be("Laptop");
     }
     
     [Theory]
