@@ -1,5 +1,4 @@
 using RecruProject.API.Logger;
-using RecruProject.Core.Logger;
 using RecruProject.Core.Repositories;
 using RecruProject.Core.Services;
 using RecruProject.Core.Validators;
