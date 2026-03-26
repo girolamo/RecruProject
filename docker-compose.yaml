@@ -1,0 +1,6 @@
+services:
+  recru-project-api:
+    build: .
+    image: recruproject.api
+    ports:
+      - "5050:8080"
