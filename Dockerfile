@@ -1,4 +1,5 @@
-﻿FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
+﻿# Build stage
+FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 WORKDIR /src
 
 COPY src/RecruProject.sln ./
@@ -13,6 +14,7 @@ COPY . ./
 
 RUN dotnet publish src/RecruProject.API/RecruProject.API.csproj -c Release -o /app/out
 
+# Run stage
 FROM mcr.microsoft.com/dotnet/aspnet:10.0
 WORKDIR /app
 
