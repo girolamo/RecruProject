@@ -11,7 +11,7 @@ public class OrderRepository : IOrderRepository
     // Because in this task, we don't have REAL external resource, ConcurrentDictionary is used as substitute
     private static readonly ConcurrentDictionary<int, Order> Orders = new();
     
-    public async Task<string> GetOrderAsync(int orderId)
+    public async Task<Order> GetOrderAsync(int orderId)
     {
         await Task.Delay(100);
         
@@ -26,10 +26,10 @@ public class OrderRepository : IOrderRepository
             throw new KeyNotFoundException($"Order with id {orderId} not found.");
         }
         
-        return order.Description;
+        return order;
     }
 
-    public async Task AddOrderAsync(Order order)
+    public async Task<int?> AddOrderAsync(Order order)
     { 
         await Task.Delay(100);
         
@@ -38,5 +38,7 @@ public class OrderRepository : IOrderRepository
         {
             throw new ArgumentException($"Order with id {order.Id} already exists.");
         }
+
+        return order.Id;
     }
 }

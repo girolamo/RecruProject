@@ -1,0 +1,24 @@
+name: Run RecruProject.Infrastrucutre.Tests
+
+on:
+  pull_request: 
+    branches:
+      - main
+        
+jobs: 
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Setup .ASP NET10
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '10.0'
+      
+    - name: Restore
+      run: dotnet restore src/RecruProject.sln
+      
+    - name: Run tests
+      run: dotnet test src/RecruProject.Infrastructure.Tests/RecruProject.Infrastructure.Tests.csproj --configuration Release --no-restore

@@ -30,7 +30,7 @@ public class OrderServiceTests
         _mockOrderValidator.Setup(f => f.IsValid(1)).Returns(true);
         _mockOrderValidator.Setup(f => f.IsValid(2)).Returns(true);
 
-        _mockOrderRepository.Setup(f => f.GetOrderAsync(1)).ReturnsAsync("TestOrderName1");
+        _mockOrderRepository.Setup(f => f.GetOrderAsync(1)).ReturnsAsync(new Order {  Id = 1, Description = "TestOrderName1" });
         _mockOrderRepository.Setup(f => f.GetOrderAsync(2)).ThrowsAsync(new Exception("Test exception"));
     }
 

@@ -1,21 +1,18 @@
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using RecruProject.Console.Logger;
-using RecruProject.Core.Logger;
+using RecruProject.API.Logger;
 using RecruProject.Core.Repositories;
 using RecruProject.Core.Services;
 using RecruProject.Core.Validators;
 using RecruProject.Infrastructure.Repositories;
 using RecruProject.Infrastructure.Services;
 using RecruProject.Infrastructure.Validators;
+using ILogger = RecruProject.Core.Logger.ILogger;
 
-namespace RecruProject.Console.Configuration;
+namespace RecruProject.API.Configuration;
 
 public static class RegisterServices
 {
     public static void Register(this IServiceCollection services)
     {
-
         services.AddSingleton<IConfiguration>(_ => new ConfigurationBuilder()
             .SetBasePath(Directory.GetCurrentDirectory())
             .AddJsonFile("appsettings.json")
